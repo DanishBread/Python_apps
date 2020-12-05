@@ -8,7 +8,7 @@ score=0
 randomindexlist=[]
 for _ in range (2):
   randomindexlist.append(randint(0, len(data)-1))
-  
+
 while not game_over:
   print(art.logo, "\n")
   print(f"Compare A: {data[randomindexlist[0]]['name']},\n A {data[randomindexlist[0]]['description']} from {data[randomindexlist[0]]['country']}...")
@@ -23,6 +23,7 @@ while not game_over:
 
   if users_answer == correct_answer:
     score+=1
+    clear()
     print("You're right! You gained a point!\nNow your current score is", score)
     randomindexlist.pop(0)
     randomindexlist.append(randint(0, len(data)-1))
